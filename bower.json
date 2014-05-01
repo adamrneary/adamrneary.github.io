@@ -1,0 +1,9 @@
+{
+  "name": "adamrneary",
+  "version": "0.0.1",
+  "private": false,
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "3.1.1"
+  }
+}
