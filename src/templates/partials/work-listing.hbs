@@ -1,0 +1,14 @@
+<ul class="portfolio">
+  {{#each work-listing}}
+    <li>
+      <div class='title'>{{this.title}}</div>
+      <img src="/assets/img/{{this.image}}" alt="">
+      <div class="caption">
+        <div class="blur"></div>
+        <div class="caption-text">
+          <p>{{this.text}}</p>
+        </div>
+      </div>
+    </li>
+  {{/each}}
+</ul>

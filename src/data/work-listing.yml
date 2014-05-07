@@ -1,0 +1,136 @@
+-
+  title: Small business analytics app
+  image: sample-portfolio-item.jpg
+  text: >
+    SaaS application for small business finanical planning and analysis. Built
+    in Backbone with a Rails back end, pulling accounting data from Quickbooks
+    and Xero. The use of interactive charts and tables makes planning easier,
+    faster, and more intuitive. Rolled out to 3,500 small businesses.
+-
+  title: Reactive library for time series analysis
+  image: sample-portfolio-item.jpg
+  text: >
+    Javascript library for using reactive programming for cached
+    time series analysis in the browser. For models with complex
+    interdependencies (such as a small business financial model), "Excel
+    in the cloud" is the only answer with adequate performance.
+-
+  title: Interactive chart library
+  image: sample-portfolio-item.jpg
+  text: >
+    Javascript library built on d3 to provide a more tactile experience. Charts
+    not only respond gracefully to UI events, but users can drag nodes
+    in line charts or the tops of columns to edit data. These events send
+    callbacks to persist data changes.
+-
+  title: Interactive table library
+  image: sample-portfolio-item.jpg
+  text: >
+    Javascript library built on d3 to provide a more tactile experience. Not
+    only are cells editable, but the user can drag rows to manage ordering or
+    hierarchies. In addition, time series columns can dynamically aggregate as
+    the users adjusts the displayed timeframe.
+-
+  title: Tech advisory and help with CTO recruiting
+  image: sample-portfolio-item.jpg
+  text: >
+    Early stage tech advisory for two non-technical co-founders of a big data
+    oriented fashion startup. Assisted with CTO recruiting by providing
+    technical interviews and introductions. Team has since raised $4.5M and is
+    trending to cash flow positive.
+-
+  title: Data forensics for 30-year fraud case
+  image: sample-portfolio-item.jpg
+  text: >
+    Data discovery and modeling for one of the largest fraud cases in history.
+    Model required matching transfers across thousands of accounts and recursively adjusting
+    balances over 30 years of financial skullduggery with patchy data arriving
+    sporadically to fill gaps. Analysis consumed by the WSJ, FBI, and trustees.
+-
+  title: Bankruptcy data consolidation
+  image: sample-portfolio-item.jpg
+  text: >
+    Emergency data consolidation for Fortune 50 auto maker bankruptcy. Required
+    an auditable ETL pipeline for 72 disparate source ERP systems to support
+    reporting for restructuring. Different charts of accounts, different systems,
+    different data formats.
+-
+  title: Building a federal government data team
+  image: sample-portfolio-item.jpg
+  text: >
+    Creation of the "Information Management" department for a foreign federal
+    government. Built a team of consultants for initial analysis, then assisted
+    with recruiting and training of the initial data team to take over.
+-
+  title: "Inventory optimization, real time logistics"
+  image: sample-portfolio-item.jpg
+  text: >
+    Emergency tactical shift for a private hospital network in the UK.
+    Regularly changes forced instrument sterlization off-site, requiring the
+    sudden implementation of a hub-and-spoke supply chain for critical items.
+    Our app managed inventory levels, provided real-time visibility, and
+    integrated with surgical scheduling for demand.
+-
+  title: "Activity-based-costing, pricing optimization"
+  image: sample-portfolio-item.jpg
+  text: >
+    Granular model and web application serving Finance & Operations for a
+    private hospital network in the UK. Managed hundreds of thousands of inputs
+    from a range of clinical and nursing teams on the ground. Output models
+    profitability of thousands of procedures across regions and specialties.
+-
+  title: "Market research aggregation, reporting"
+  image: sample-portfolio-item.jpg
+  text: >
+    Automated data aggregation, ETL, and reporting solution for UK market data
+    firm. Reduced cycle times from weeks of manual effort for a team of analysts
+    to several minutes of automated magicsauce.
+-
+  title: "Org. visibility & financial reporting"
+  image: sample-portfolio-item.jpg
+  text: >
+    Data cleansing and reporting for Fortune 500 Financial Services holding
+    company. Reconciled reporting differences in organizational structures
+    across subsidiaries, building a unified reporting structure for the CFO.
+    Transitioned the output to IT for formalization.
+-
+  title: Supply chain network optimization
+  image: sample-portfolio-item.jpg
+  text: >
+    End to end network optimization for a Fortune 500 consumer products
+    manufacturer. Inputs featured billions of records worth of
+    manufacturing history, shipment and warehousing events, product lists with
+    thousands of SKUs, shipping rates, etc. (all dirty). Optimized for
+    profitability across a portfolio of scenarios.
+-
+  title: Predictive model for smart grid
+  image: sample-portfolio-item.jpg
+  text: >
+    Energy sector client required a more mature predictive model for
+    their signature smart grid application, which routes energy based on both
+    supply and demand. Parsed >100M data points and tested numerous machine
+    learning strategies, of which a neural network provided the best pattern
+    recognition.
+-
+  title: Cancer research aggregation framework
+  image: sample-portfolio-item.jpg
+  text: >
+    Worked with clinical teams for the UK National Health Service to build a
+    data aggregation framework for cancer research, taking into consideration
+    patient confidentiality requirements and rigorous statistical rules for
+    avoiding averages of averages, etc. Project included ETL and reporting.
+-
+  title: "Spend visibility, data norm & cat "
+  image: sample-portfolio-item.jpg
+  text: >
+    Numerous projects for Fortune 500 companies and state and federal
+    governments consolidation, cleansing, normalizing, and categorizing
+    historical spend data. Built tools to automate common data cleansing
+    routines.
+-
+  title: "Kimball method ETL, DW, OLAP, reporting"
+  image: sample-portfolio-item.jpg
+  text: >
+    Numerous projects (both client and internal) using traditional
+    Kimball Method approaches to ETL, data warehousing, and OLAP for reporting.
+    Old school business intelligence.
