@@ -1,10 +1,16 @@
 module.exports =
   pages:
     options:
-      flatten: true
+      flatten: false
+      expand: true
       assets: "tmp/assets"
       layout: "src/templates/layouts/default.hbs"
       partials: "src/templates/partials/*.hbs"
       data: "src/data/*.{json,yml}"
-    files:
-      "tmp/": ["src/templates/pages/*.hbs"]
+    files: [
+      expand: true
+      cwd: 'src/templates/pages'
+      src: '**/*.hbs'
+      dest: 'tmp/'
+      ext: '.html'
+    ]

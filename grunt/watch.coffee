@@ -1,4 +1,4 @@
-  module.exports =
+module.exports =
   copy_img:
     tasks: ["copy:img"]
     files: ['src/img/**/*.{png,jpg,gif}']
