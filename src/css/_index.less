@@ -16,16 +16,27 @@
     position: fixed;
   }
 
+  .breadcrumb > li a {
+    color: white;
+  }
+
+  .breadcrumb > li + li:before {
+    color: @brand-primary;
+  }
+
   h1  {
     margin-bottom: 0.35em;
     display: inline-block;
     position: fixed;
-    bottom: 75px;
+    bottom: 25px;
     z-index: 2;
     line-height: 1.35;
     color: white;
-    font-size: 25px;
+    font-size: 18px;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    font-family: @font-family-sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
   }
 
 }
