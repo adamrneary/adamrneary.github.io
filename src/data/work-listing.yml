@@ -1,6 +1,6 @@
 -
   title: Small business analytics app
-  image: sample-portfolio-item.jpg
+  image: work/activecell-400-300.png
   text: >
     SaaS application for small business finanical planning and analysis. Built
     in Backbone with a Rails back end, pulling accounting data from Quickbooks
@@ -8,62 +8,77 @@
     faster, and more intuitive. Rolled out to 3,500 small businesses.
 -
   title: Reactive library for time series analysis
-  image: sample-portfolio-item.jpg
+  image: work/striker-400-300.png
   text: >
-    Javascript library for using reactive programming for cached
+    Javascript library that uses reactive programming techniques to cache
     time series analysis in the browser. For models with complex
     interdependencies (such as a small business financial model), "Excel
     in the cloud" is the only answer with adequate performance.
 -
-  title: Interactive chart library
-  image: sample-portfolio-item.jpg
-  text: >
-    Javascript library built on d3 to provide a more tactile experience. Charts
-    not only respond gracefully to UI events, but users can drag nodes
-    in line charts or the tops of columns to edit data. These events send
-    callbacks to persist data changes.
--
-  title: Interactive table library
-  image: sample-portfolio-item.jpg
-  text: >
-    Javascript library built on d3 to provide a more tactile experience. Not
-    only are cells editable, but the user can drag rows to manage ordering or
-    hierarchies. In addition, time series columns can dynamically aggregate as
-    the users adjusts the displayed timeframe.
--
   title: Tech advisory and help with CTO recruiting
-  image: sample-portfolio-item.jpg
+  image: work/hukkster-400-300.png
   text: >
     Early stage tech advisory for two non-technical co-founders of a big data
     oriented fashion startup. Assisted with CTO recruiting by providing
     technical interviews and introductions. Team has since raised $4.5M and is
     trending to cash flow positive.
 -
+  title: Interactive chart library
+  image: work/tactile-400-300.png
+  text: >
+    Javascript library built on d3 to provide a more tactile user experience.
+    Charts not only respond gracefully to UI events, but users can drag nodes
+    in line charts or the tops of columns to edit data. These events send
+    callbacks to persist data changes.
+-
   title: Data forensics for 30-year fraud case
-  image: sample-portfolio-item.jpg
+  image: work/madoff-400-300_bw.jpg
   text: >
     Data discovery and modeling for one of the largest fraud cases in history.
     Model required matching transfers across thousands of accounts and recursively adjusting
     balances over 30 years of financial skullduggery with patchy data arriving
     sporadically to fill gaps. Analysis consumed by the WSJ, FBI, and trustees.
 -
+  title: Socket manager for node
+  image: work/porchetta-400-300.png
+  text: >
+    Beacon of light in a dim, uncaring world, connecting websockets and
+    managing real time data.
+    And pork.
+-
   title: Bankruptcy data consolidation
-  image: sample-portfolio-item.jpg
+  image: work/gm-400-300_bw.jpg
   text: >
     Emergency data consolidation for Fortune 50 auto maker bankruptcy. Required
     an auditable ETL pipeline for 72 disparate source ERP systems to support
     reporting for restructuring. Different charts of accounts, different systems,
     different data formats.
 -
+  title: Interactive table library
+  image: work/tablestakes-400-300.png
+  text: >
+    Javascript library built on d3 to provide a more tactile experience. Not
+    only are cells editable, but the user can drag rows to manage ordering or
+    hierarchies. In addition, time series columns can dynamically aggregate as
+    the users adjusts the displayed timeframe.
+-
   title: Building a federal government data team
-  image: sample-portfolio-item.jpg
+  image: work/information-management-400-300_bw.jpg
   text: >
     Creation of the "Information Management" department for a foreign federal
     government. Built a team of consultants for initial analysis, then assisted
     with recruiting and training of the initial data team to take over.
 -
+  title: "Activity-based-costing, pricing optimization"
+  image: work/nuffield-400-300.jpg
+  text: >
+    Granular model and web application serving Finance & Operations for a
+    private hospital network in the UK. Managed hundreds of thousands of inputs
+    from a range of clinical and nursing teams on the ground. Output models
+    profitability of thousands of procedures across regions and specialties.
+-
   title: "Inventory optimization, real time logistics"
-  image: sample-portfolio-item.jpg
+  image: work/autoclave-400-300_bw.jpg
   text: >
     Emergency tactical shift for a private hospital network in the UK.
     Regularly changes forced instrument sterlization off-site, requiring the
@@ -71,23 +86,40 @@
     Our app managed inventory levels, provided real-time visibility, and
     integrated with surgical scheduling for demand.
 -
-  title: "Activity-based-costing, pricing optimization"
-  image: sample-portfolio-item.jpg
+  title: Mock up of Wine flash sale site
+  image: work/arjunsbow-400-300.png
   text: >
-    Granular model and web application serving Finance & Operations for a
-    private hospital network in the UK. Managed hundreds of thousands of inputs
-    from a range of clinical and nursing teams on the ground. Output models
-    profitability of thousands of procedures across regions and specialties.
+    Just for fun, my experiment in "flash developing" a flash sale site. 1 day
+    to create a wine brand, 1 day to build an eCommerce site to sell it. Cribs
+    lots of ideas from Gustin and may be used…some day…by someone…It's currently
+    100% static with boostrap/less, grunt, and handlebars.
+-
+  title: eCommerce design and implementation
+  image: work/hairowin-400-300.png
+  text: >
+    Design and web implementation for a new eCommerce site. Used Shopify for the
+    eCommerce platform, Stripe for payments, and Shipwire for logistics. Used
+    grunt to manage local development with less and liquid.
+-
+  title: Client-side storage/sync/bootstrap
+  image: work/shotgun-400-300.png
+  text: >
+    Details to follow
 -
   title: "Market research aggregation, reporting"
-  image: sample-portfolio-item.jpg
+  image: work/sample.jpg
   text: >
     Automated data aggregation, ETL, and reporting solution for UK market data
     firm. Reduced cycle times from weeks of manual effort for a team of analysts
     to several minutes of automated magicsauce.
 -
+  title: Custom extract/transform/load in node
+  image: work/restful-etl-400-300.png
+  text: >
+    Details to follow
+-
   title: "Org. visibility & financial reporting"
-  image: sample-portfolio-item.jpg
+  image: work/mmc-400-300.jpg
   text: >
     Data cleansing and reporting for Fortune 500 Financial Services holding
     company. Reconciled reporting differences in organizational structures
@@ -95,7 +127,7 @@
     Transitioned the output to IT for formalization.
 -
   title: Supply chain network optimization
-  image: sample-portfolio-item.jpg
+  image: work/unilever-400-300_bw.jpg
   text: >
     End to end network optimization for a Fortune 500 consumer products
     manufacturer. Inputs featured billions of records worth of
@@ -104,7 +136,7 @@
     profitability across a portfolio of scenarios.
 -
   title: Predictive model for smart grid
-  image: sample-portfolio-item.jpg
+  image: work/smartgrid-400-300.jpg
   text: >
     Energy sector client required a more mature predictive model for
     their signature smart grid application, which routes energy based on both
@@ -113,7 +145,7 @@
     recognition.
 -
   title: Cancer research aggregation framework
-  image: sample-portfolio-item.jpg
+  image: work/cancer-research-400-300_bw.jpg
   text: >
     Worked with clinical teams for the UK National Health Service to build a
     data aggregation framework for cancer research, taking into consideration
@@ -121,7 +153,7 @@
     avoiding averages of averages, etc. Project included ETL and reporting.
 -
   title: "Spend visibility, data norm & cat "
-  image: sample-portfolio-item.jpg
+  image: work/cardinal-400-300_bw.jpg
   text: >
     Numerous projects for Fortune 500 companies and state and federal
     governments consolidation, cleansing, normalizing, and categorizing
@@ -129,7 +161,7 @@
     routines.
 -
   title: "Kimball method ETL, DW, OLAP, reporting"
-  image: sample-portfolio-item.jpg
+  image: work/ssis.jpg
   text: >
     Numerous projects (both client and internal) using traditional
     Kimball Method approaches to ETL, data warehousing, and OLAP for reporting.
