@@ -13,13 +13,15 @@ default:
 'build:dist':
     - 'build:debug'
     - 'clean:dist'
-    - 'useminPrepare'
-    - 'concat'
-    - 'cssmin'
-    - 'uglify'
+    # TODO: GD this thing is touchy
+    # - 'useminPrepare'
+    # - 'concat'
+    # - 'cssmin'
+    # - 'uglify'
     - 'copy:dist'
-    - 'rev'
-    - 'usemin'
+    - 'copy:dist_css_js'
+    # - 'rev'
+    # - 'usemin'
 server:
     - 'build:debug'
     - 'connect:livereload'

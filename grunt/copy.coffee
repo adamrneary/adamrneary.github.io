@@ -1,4 +1,9 @@
 module.exports =
+  root:
+    expand: true
+    cwd: "src"
+    src: ['*']
+    dest: "tmp"
   css:
     expand: true
     cwd: "src/css"
@@ -19,6 +24,12 @@ module.exports =
     cwd: "src/js"
     src: ['**/*.js']
     dest: "tmp/assets/js"
+  # TODO: remove dist_css_js (it's temp for usemin problems)
+  dist_css_js:
+    expand: true
+    cwd: "tmp/assets"
+    src: ["**/*.{css,js}"]
+    dest: "dist/assets"
   dist:
     files: [
       expand: true
