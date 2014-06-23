@@ -24,6 +24,13 @@ module.exports =
     cwd: "src/js"
     src: ['**/*.js']
     dest: "tmp/assets/js"
+  dist_vendor:
+    expand: true
+    cwd: "tmp/vendor"
+    src: ['**/*']
+    dest: "dist/vendor"
+
+
   # TODO: remove dist_css_js (it's temp for usemin problems)
   dist_css_js:
     expand: true

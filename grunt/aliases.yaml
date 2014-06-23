@@ -19,6 +19,7 @@ default:
     # - 'cssmin'
     # - 'uglify'
     - 'copy:dist'
+    - 'copy:dist_vendor'
     - 'copy:dist_css_js'
     # - 'rev'
     # - 'usemin'
