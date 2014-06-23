@@ -1,0 +1,130 @@
+---
+title: "Example post"
+---
+
+We had major league goldilocks syndrome with our static marketing site. At first, it was massively under-engineered. Then, it was massively over-engineered. Now, it's just right.
+
+## Strike 1: Under-engineered static site
+
+Initially, our minimalist static marketing site (then [profitably.com](www.profitably.com)) was fully static. We had a css file and a folder system full of html files. We had a folder system full of images, and it was hosted on a virtual box we manually administered.
+
+While the site was crafted with care, design updates were an absolute nightmare, particularly for a startup that was evolving quickly and needed to continue updating our messaging as we iterated. Plus, performance was a dog. ySlow grade "F" says, "C'mon man!"
+
+It was a massively under-engineered solution, and ultimately one that broke for us very quickly.
+
+## Strike 2: Over-engineered Wordpress with custom templates, plugins, widgets...and bugs.
+
+Blog platforms like Wordpress were super cool as they matured, and when our static site process broke down, we "stepped up" to Wordpress as a CMS. Again, we were hosting on a virtual box that we manually administered.
+
+The promises were great for a guy like me. We had lots of contributing authors to wrangle, and wordpress could handle author pages, categories, custom tricks, you name it.
+
+In no time we found ourselves enslaved to a massive, bloated system written in PHP (woof) with templates and hooks and all these ridiculous plugins and widgets and bugs and upgrades. It's a nightmare, and you've got your content sitting in a database somewhere with a cheap hosting service. Gross. Plus, despite all our performance-improvement plug-ins, the site was a major dog. ySlow "F" still, but it felt worse.
+
+## Just right: Jekyll/S3/CloudFront/dnsimple for the site
+
+I can't believe how much better life is with the new setup. Here's how we roll:
+
+* [jekyll](http://github.com/mojombo/jekyll) for site generation based on markdown and templates
+* [jammit](http://documentcloud.github.com/jammit) and [jammit plugin for jekyll](https://gist.github.com/1224971) for a simple asset pipeline
+* [s3cmd](http://s3tools.org/s3cmd) for sync to Amazon S3
+* [Amazon S3](http://aws.amazon.com/s3) for static file storage
+* [Amazon CloudFront](http://aws.amazon.com/cloudfront) for our Content Delivery Network
+* [dnsimple](http://dnsimple.com) for world-class dns
+
+We found [this article](http://www.maxmasnick.com/2012/01/21/jekyll_s3_cloudfront) by Max Masnick helpful as we got started. Here are the details for us, as step-by-step as I can muster!
+
+### Jekyll as your "CMS"
+
+Tom wrote the [definitive article](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html) on the mess and why he built [jekyll](http://github.com/mojombo/jekyll) to save the day. This site is a Jekyll site. [www.activecell.com](www.activecell.com) is a Jekyll site. We love it.
+
+I code all day using TextMate and Terminal, and I manage source control with github, so it's natural to want to keep the same pattern both for blogging and for our marketing site (as opposed to a chaotic, web-based nightmare in Wordpress). But more importantly, we are used to keeping clean CSS with SASS and clean html with simple templates that can employ partials without a lot of overhead. Jekyll provides that, and it's brilliant. Plus, we can write our posts in markdown. Fantastic.
+
+### Rake/jammit for deployment
+
+We use [jammit](http://documentcloud.github.com/jammit) and the [jammit plugin for jekyll](https://gist.github.com/1224971) for the asset pipeline.
+
+This is where we tuned the process down to handsome:
+
+Inside \_config.yml:
+
+    cdn: http://d2n39uym85fey2.cloudfront.net
+    timestamp: null
+
+Inside plugins/myfilter.rb:
+
+    module Jekyll
+      module AssetFilter
+        def cdn(input)
+          timestamp = @context.registers[:site].config['timestamp']
+          if timestamp
+            "#{@context.registers[:site].config['cdn'] || ""}/#{input}"
+          else
+            input
+          end
+        end
+
+        def timestamped(input)
+          timestamp = @context.registers[:site].config['timestamp']
+          if timestamp
+            "#{input.split('.')[0]}_#{timestamp}.#{input.split('.')[1]}"
+          else
+            input
+          end
+        end
+      end
+    end
+
+    Liquid::Template.register_filter(Jekyll::AssetFilter)
+
+nd we omit the "timestamped" component for assets that are not packaged and timestamped.
+
+The subtle thing is that we are using the `timestamp` variable in the config not only for a consistent timestamp for asset versioning, but also as a sort of flag as to whether to include the CDN in the first place. If `timestamp` is null, you get 'assets/packaged\_css.css' with a local reference. If timestamp is '20120101' you get http://d2n39uym85fey2.cloudfront.net/assets/packaged\_css_20120101\_.css. Easy.
+
+Deploys are executed with rake simply and easily. Please pardon the hacky shell style below. N00b.
+
+Rakefile:
+
+As you can see in the code above, we just set the timestamp, generate the site, sync to S3, and then reset the timestamp to null. [s3cmd](http://s3tools.org/s3cmd) drives the sync with s3, and that means that authentication is managed on local machines, so we don't have to worry about environment variables or credentials in the source control.
+
+This is actually more convenient than it seems. Any engineer can hack on the site using `jekyll --server --auto` entirely off localhost. And then anyone with deploy access can deploy with `rake deploy`. Fantastic.
+
+(Note: There's a big to-do up there about replacing the hard-coded renames with finds. My shell skills are basic at best, so that got punted for now.)
+
+### S3/Cloudfront for the storage
+
+When we originally had a fully-static site, it was sitting on a virtual box that we managed. What a nightmare. With Wordpress, it was orders of magnitude worse. One way or another, we were constantly running into silly issues or slow performance. Either you are paying WAY too much to have adults manage the box correctly (or at least promise to!), or your marketing site is on some low-cost junker. I don't like either situation.
+
+But once S3 added direct static website hosting, the debate ended immediately. We just sync all your static files to S3 just like we do for our static assets supporting our web application. 3-4 configuration settings later, your site is live and sexy on S3.
+
+To ensure that we're getting the brilliant performance we want (and because it's cheap as chips), we then plug in a CloudFront Distribution to the S3 bucket (again, 3-4 configuration settings), using the asset filter above.
+
+So boom. Now you've got a live site with one-line deploy that is absurdly easy to maintain and just as absurdly inexpensive. The problem is, it sits at [http://www.activecell.com.s3-website-us-east-1.amazonaws.com](http://www.activecell.com.s3-website-us-east-1.amazonaws.com).
+
+### Dnsimple for that apex domain problem
+
+We originally used github pages for hosting, and I thought github pages was going to be all we needed. We just name our repo activecell.github.com, push to master, and flash a gang sign cause we're deploy gangstas.
+
+We got 90% there, but then we learned that you can't run plugins on github pages. It makes sense for security, but it seems like we've got a paradise platform in Jekyll and a paradise hosting solution in github pages, and they're created by the same team, and they don't work together?
+
+Similarly, it would be an easy (ish) fix for github is to allow pages to optionally serve up the \_site folder rather than the root. Then you could 'jekyll && git push origin master' and be done.
+
+But since you can't, many folks are employing what I believe to be VERY complicated solutions to keep the source separate from the packaged results and push the packaged results to the master branch of either the same or a different repo. Crazy.
+
+One alternative, then, is that you can just use the S3 website endpoint. We were trying that until we discovered the apex domain problem: neither GoDaddy's DNS nor Amazon's Route 53 could alias the apex domain (activecell.com as opposed to www.activecell.com) to a dynamic site, and S3 doesn't give you a static IP to hit. With AWS you can currently alias to an elastic load balancer, but that points to EC2 instances. Surely Amazon will soon allow you to point to your S3 website endpoint from Route 53, but until that happens, another dead end.
+
+Then we discovered [Dnsimple](www.dnsimple.com) and their more flexible "alias" record type. Problem solved. We point www.activecell.com to our S3 website endpoint with a CNAME, and we point activecell.com to the same with an ALIAS. HTML is served from S3, and CSS/JS/IMG are served from Cloudfront.
+
+Incidentally, I have also found dnsimple to be great for managing all those records for google apps and heroku, so they are an easy choice for us. Great service.
+
+### The results
+
+Awesomeness.
+
+* Any engineer can develop locally with `jekyll --server --auto`
+* Engineers with deploy access to S3 can deploy with `rake deploy`
+* Assets are packaged, minified, compressed, and timestamped automatically
+* References to assets are managed correctly in local and deployed environments
+* ySlow score of **94** because we follow all the rules
+* No crazy maintenance, bloat, or nightmares
+
+Oh yeah, and we pay less than $10 per month to have it out there. Life's good.
