@@ -37,6 +37,9 @@ module.exports =
     cwd: "tmp/assets"
     src: ["**/*.{css,js}"]
     dest: "dist/assets"
+  dist_cname:
+    src: 'src/CNAME',
+    dest: 'dist/CNAME',
   dist:
     files: [
       expand: true
