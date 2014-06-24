@@ -4,11 +4,12 @@ module.exports =
     expand: true
     assets: "tmp/assets"
     layoutdir: 'src/templates/layouts'
-    layout: 'default.hbs'
     partials: "src/templates/partials/*.hbs"
     data: "src/data/*.{json,yml}"
     marked: {sanitize: false }
   pages:
+    options:
+      layout: 'contained.hbs'
     files: [
       expand: true
       cwd: 'src/templates/pages'
