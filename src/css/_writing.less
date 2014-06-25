@@ -1,17 +1,18 @@
-ul.articles {
-  list-style: none;
-  margin-top: 60px;
-  padding-left: 0;
+.articles {
 
-  .section-header {
-    color: @text-color;
-  }
-  span {
-    color: @gray-light;
+  margin-top: 60px;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
   }
 
   li {
     margin: 15px 0;
+  }
+
+  h2 {
+    color: @text-color;
   }
 }
 
@@ -29,8 +30,12 @@ article {
     margin: 0;
   }
 
-  .hentry {
-  margin-top: 60px;
+  .entry-summary, .byline.author.vcard {
+    display: none;
+  }
+
+  .entry-content {
+    margin-top: 60px;
   }
 
 }
