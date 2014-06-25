@@ -1,0 +1,35 @@
+---
+layout: "contained.hbs"
+---
+
+<article class="hentry">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="entry-title">{{title}}</h1>
+      <div class="entry-summary">{{summary}}</div>
+      <ol class="breadcrumb metadata">
+        <li>
+          <time class="published" datetime="{{pub-date}}">
+            {{pub-date}} (TODO: Format this date)
+          </time>
+        </li>
+        <li>{{tags}} TODO: Tag array</li>
+      </ol>
+      <div class="byline author vcard">
+        <span class="fn">Adam Neary</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="entry-content">
+
+        {{#markdown}}
+          {{> body }}
+        {{/markdown}}
+
+      </div> <!--  hentry -->
+    </div> <!--  col -->
+  </div> <!--  row -->
+</article>
+{{> mailing-list-cta}}

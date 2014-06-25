@@ -17,12 +17,12 @@ module.exports =
       dest: 'tmp/'
       ext: '.html'
     ]
-  content:
+  posts:
     options:
-      layout: 'markdown.hbs'
+      layout: 'post.hbs'
     files: [
       expand: true
-      cwd: 'src/content'
+      cwd: 'src/content/posts'
       src: '**/*.hbs'
       dest: 'tmp/'
       ext: '.html'
