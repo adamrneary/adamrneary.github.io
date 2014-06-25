@@ -8,12 +8,19 @@ layout: "contained.hbs"
       <h1 class="entry-title">{{title}}</h1>
       <div class="entry-summary">{{summary}}</div>
       <ol class="breadcrumb metadata">
+
+        {{#if pub-date}}
         <li>
           <time class="published" datetime="{{pub-date}}">
-            {{pub-date}} (TODO: Format this date)
+            {{formatDate pub-date "%B %e, %Y"}}
           </time>
         </li>
-        <li>{{tags}} TODO: Tag array</li>
+        {{/if}}
+
+        {{#each tags}}
+          <li>{{tag}}</li>
+        {{/each}}
+
       </ol>
       <div class="byline author vcard">
         <span class="fn">Adam Neary</span>
