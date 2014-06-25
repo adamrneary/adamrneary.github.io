@@ -6,7 +6,11 @@ layout: "contained.hbs"
   <div class="row">
     <div class="col-sm-12">
       <h1 class="entry-title">{{title}}</h1>
-      <div class="entry-summary">{{summary}}</div>
+
+      {{#if summary}}
+        <div class="entry-summary">{{summary}}</div>
+      {{/if}}
+
       <ol class="breadcrumb metadata">
 
         {{#if pub-date}}
@@ -17,8 +21,8 @@ layout: "contained.hbs"
         </li>
         {{/if}}
 
-        {{#each tags}}
-          <li>{{tag}}</li>
+        {{#each taglist}}
+          <li>{{.}}</li>
         {{/each}}
 
       </ol>
