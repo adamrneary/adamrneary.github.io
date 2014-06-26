@@ -1,6 +1,6 @@
 * [A Tale of Two Financings](management/two-financings.html)
 * [Evaluating Customer Acquisition Cost](management/cac.html)
-* [1099s: 2 Hours and $87 Sure Beats 3 Weeks and $1,377](management/1099.html)
-* [Startup power tool: oDesk](management/odesk.html)
+* [2 Hours and $87 Sure Beats 3 Weeks and $1,377: A Lesson from 1099s](management/1099.html)
+* [Startup Power Tool: oDesk](management/odesk.html)
 * [The Activecell Method for Business Planning](management/activecell-method.html)
 * [Yoga and Piano Practice to Curb Psychic Entropy](management/entropy.html)
