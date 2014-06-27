@@ -2,7 +2,7 @@
 
 ## Diet
 
-* The 5-2 Diet: Intermittent Fasting Is No Fad _(coming soon)_
+* [The 5-2 Diet: Intermittent Fasting Is No Fad](health/5-2.html)
 * Eating Right for Busy People _(coming soon)_
 * Sustainable Agriculture and Local, Natural Food _(coming soon)_
 * On the Topic of Juice _(coming soon)_
