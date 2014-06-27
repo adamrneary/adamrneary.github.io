@@ -1,16 +1,17 @@
 @import '../../tmp/vendor/bootstrap/less/bootstrap.less';
 @import '_variables';
-@import '_nav';
-@import '_social';
-@import '_header';
-@import '_footer';
-@import '_index';
-@import '_work';
-@import '_writing';
-@import '_doing-good';
-@import '_contact';
-@import '_listings';
-@import '_scaffolding';
+@import 'global/_typography';
+@import 'global/_nav';
+@import 'global/_social';
+@import 'global/_header';
+@import 'global/_footer';
+@import 'global/_listings';
+@import 'global/_scaffolding';
+@import 'sections/_index';
+@import 'sections/_work';
+@import 'sections/_writing';
+@import 'sections/_doing-good';
+@import 'sections/_contact';
 
 html {
   min-width: 1080px;
@@ -20,13 +21,13 @@ body {
   position: relative;
 }
 
-.container {
-  padding-top: 5%;
+.page-wrapper {
+  min-height: 100%;
+  position: relative;
 }
 
-a:hover, a:focus {
-  text-decoration: none;
-  transition: color 0.75s ease;
+.container {
+  padding-top: 5%;
 }
 
 hr {
@@ -37,26 +38,6 @@ hr {
 
 btn {
   font-family: @font-family-sans-serif;
-}
-
-.page-wrapper {
-  min-height: 100%;
-  position: relative;
-}
-
-.small-sans-serif {
-  font-family: @font-family-sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  text-transform: uppercase;
-
-  a {
-    font-weight: 700;
-  }
-}
-
-code {
-  font-size: @font-size-small;
 }
 
 .cta {
