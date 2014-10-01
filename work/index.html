@@ -54,7 +54,6 @@
   <li><a href="/">Home</a></li>
   <li><a href="/work">Consulting</a></li>
   <li><a href="/writing">Writing</a></li>
-  <li><a href="/good">Doing Good</a></li>
   <li><a href="/contact">Need Some Help?</a></li>
 </ol>
 
@@ -77,9 +76,9 @@
 
     <ul class="nav nav-tabs">
       <li class="active"><a href="#strategy" data-toggle="tab">Data Strategy</a></li>
+      <li><a href="#engineering" data-toggle="tab">Data Engineering</a></li>
+      <li><a href="#science" data-toggle="tab">Data Science</a></li>
       <li><a href="#applications" data-toggle="tab">Applications</a></li>
-      <li><a href="#analytics" data-toggle="tab">Analytics</a></li>
-      <li><a href="#bi" data-toggle="tab">Business Intelligence</a></li>
       <li><a href="#prototypes" data-toggle="tab">Prototypes</a></li>
       <li><a href="#advisory" data-toggle="tab">Advisory</a></li>
     </ul>
@@ -91,32 +90,39 @@
         <div class="row small">
           <div class="col-sm-6">
             <p>
-              Data should be treated as a function in its own right, serving
-              the other functions in the business.
-            </p>
-              Financial and operational systems, web application databases,
-              event and log streams, and third party SaaS services all
-              generate data, and the tools and methods by which all this data
-              is tracked, gathered, analyzed, and surfaced is evolving at a
-              frenetic pace.
+              Data engineering, science, and analytics capabilities do not need to
+              be scattered among all your other business functions in a siloed or
+              haphazard way.
             </p>
             <p>
-              I help organizations focus on the insights they need most
-              urgently and build a well-tuned data operation — even if it is
-              one person to start — to ensure data capture, transformation,
-              storage, and reporting respond as quickly as the business.
+              Instead, a cohesive data strategy coordinates the movement of data
+              between financial and operational systems, web application databases,
+              event and log streams, and third party SaaS services. The Data
+              function can then coordinate the tools and methods by which all
+              this data is tracked, gathered, analyzed, and surfaced.
             </p>
             <p class="small-sans-serif"><strong>Case Studies</strong></p>
             <ul>
               <li>
                 <a href="javascript:;" class="popover-link" data-toggle="popover"
-                  data-content="Met with Product, Engineering, Executive,
+                  data-content="I worked with Product, Engineering, Executive,
                   Finance, Sales, Marketing, and Customer Support teams to
-                  assess analytical needs. Then reviewed production and SaaS
-                  service data to provide recommendations for improved data
+                  assess analytical needs. I then reviewed production and SaaS
+                  service data to provide a roadmap for improved data
                   capture and storage as well as tooling for data transformation
                   and reporting. ">
-                  Data Strategy Assessment: Series A Funded Startup
+                  Data Strategy Design for a Series A Funded Startup
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="popover-link" data-toggle="popover"
+                  data-content="A mid-tier Nonprofit was awarded a sizable grant
+                  to establish a performance measurement framework. I worked with
+                  them to rethink their data integration strategy, leaning more
+                  heavily on SaaS platforms and web services for data integration.
+                  Then we built the infrastructure to continually assess and
+                  report on performance against their mission.">
+                  Performance Measurement Design &amp; Build for a Nonprofit
                 </a>
               </li>
               <li>
@@ -135,7 +141,7 @@
                   equity acquisition. Assessed competitive advantage based on
                   sophistication of technology and level of effort to replicate.
                   Assessed potential technical debt and barriers to growth. ">
-                  Technical Diligence: Data-Intensive Software Acquisition
+                  Technical Diligence for a Data-Intensive Acquisition
                 </a>
               </li>
             <ul>
@@ -151,14 +157,196 @@
                 people to tease out our particular needs.
               <p>
                 But then, suddenly the same guy rolls his sleeves up and
-                builds data pipelines, scalable data stores, and custom
-                analytical reporting for the entire organization.
+                builds data pipelines, message queues, scalable data stores, and
+                custom analytical reporting for the entire organization. Insane.
               </p>
             </em>
             <div class="small-sans-serif"><strong>Greg Doran</strong> / CEO / Ticket Evolution</div>
           </div>
         </div>
       </div>
+
+      <div class="tab-pane" id="engineering">
+        <div class="row small">
+          <div class="col-sm-6">
+            <p>
+              After years of grinding through large, clunky, complex Business
+              Intellgience projects, I could not be more excited about how
+              dramatically the Data Engineering space has evolved recently.
+            </p>
+            <p>
+              The new world is about pipelines of streaming data managed by
+              small, asynchronous, non-blocking processes. We can record
+              everything and sift out the insights later. Some things we need to
+              know in real time, and we have reactive strategies for
+              that. Somethings we can tease out at our leisure, and we have tools
+              for that, too.
+            </p>
+            <p class="small-sans-serif"><strong>Case Studies</strong></p>
+            <ul>
+              <li>
+                <a href="javascript:;" class="popover-link" data-toggle="popover"
+                  data-content="An online labor marketplace had a continuously
+                  changing set of companies, users, and projects. Each needed to
+                  be scored across a range of variables including features like
+                  schools attended. The end solution required real time scoring
+                  of all model objects absolutely while also assessing user/project
+                  fitness. I built the solution in node.js with Redis PubSub and
+                  queueing.">
+                  Realtime Multivariate Scoring/Ranking for a Web App
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="popover-link" data-toggle="popover"
+                  data-content="Emergency data consolidation for Fortune 50
+                  auto maker bankruptcy. Required
+                  an auditable ETL pipeline for 72 disparate source ERP
+                  systems to support
+                  reporting for restructuring. Different charts of accounts,
+                  different systems,
+                  different data formats.">
+                  Bankruptcy Data Consolidation: Fortune 500 Automotive
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="popover-link" data-toggle="popover"
+                  data-content="Built a system and process to manage research
+                  data integration for the National Health Service (NHS) in the
+                  United Kingdom. The process had to take into consideration
+                  very particular statistical methods (i.e. you cannot take
+                  averages of averages) despite the large dataset.
+                  .">
+                  Cancer Research Aggregation Framework
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="popover-link" data-toggle="popover"
+                  data-content="Re-engineered a painful manual process for
+                  aggregating market research data for a UK marketing firm.
+                  The new process included piping data through numerous
+                  transformations all the way into Excel and PowerPoint. The
+                  resulting PowerPoint integration turned a three week process
+                  into a twenty minute process. ">
+                  Market Research Automation, Reporting, Dashboarding
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="popover-link" data-toggle="popover"
+                  data-content="Numerous projects (both client and internal)
+                  using traditional
+                  Kimball Method approaches to ETL, data warehousing, and OLAP
+                  for reporting.
+                  Old school business intelligence delivered with modern tools.">
+                  Kimball method ETL, DW, OLAP, Dashboards
+                </a>
+              </li>
+            <ul>
+          </div>
+          <div class="col-sm-6">
+            <img class="headshot" src="/assets/img/work-headshots/stephan.jpg">
+            <em>
+              <p>
+                Coordinating with and consolidating data from hundreds of
+                federal government departments is difficult, particularly when
+                you are talking about sensitive spend data.
+              <p>
+                Adam helped us buld the team that could replicate the work his
+                team started. His intensity can be a lot to handle, but his
+                results are without question!
+              </p>
+            </em>
+            <div class="small-sans-serif"><strong>Stéphan Déry MPA, CPA, CMA, FMA, RPA</strong> / Director General, Strategic Planning, Administration and Renewal / PWGSC Canada</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tab-pane" id="science">
+        <div class="row small">
+          <div class="col-sm-6">
+            <p>
+              The flashy side of Data Science — teasing insights out of massive,
+              homogenous data — gets a lot of press, but more often the work involves
+              many dirty, disparate datasets that require cleansing and blending,
+              categorization and normalization, and more than a little domain
+              expertise to contextualize.
+            </p>
+            <p>
+              Sometimes the hardest part is defining what it is we are solving
+              for in the first place. That's where a little expertise brings all
+              the shiny new tools to life.
+            </p>
+            <p class="small-sans-serif"><strong>Case Studies</strong></p>
+            <ul>
+              <li>
+                <a href="javascript:;" class="popover-link" data-toggle="popover"
+                  data-content="Data discovery and modeling for one of the
+                  largest fraud cases in history.
+                  Model required matching transfers across thousands of
+                  accounts and recursively adjusting
+                  balances over 30 years of financial skullduggery with patchy
+                  data arriving
+                  sporadically to fill gaps. Analysis consumed by the WSJ,
+                  FBI, and trustees.">
+                  Data Forensics for a Thirty-Year Fraud Case
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="popover-link" data-toggle="popover"
+                  data-content="Aggregated and cleansed demand signals for a
+                  UK-based smart grid company. Built a neural network model
+                  (simple machine learning) to predict future demand across
+                  millions of nodes given historical behavior and seasonality.
+                  Built the predictive model into the company's existing app.">
+                  Predictive Model for a Smart Grid Application
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="popover-link" data-toggle="popover"
+                  data-content="Performed end-to-end supply chain optimization
+                  for a Fortune 500 consumer goods company, including
+                  manufacturing, warehousing, repackaging, and all stages of
+                  distribution. Complexity of the project including >100,000 SKUs
+                  with a wide range of manufacturing and repackaging features
+                  that required an adapatable product hierarchy and intelligent
+                  constraints for each scenario. ">
+                  Supply Chain Network Optimization
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="popover-link" data-toggle="popover"
+                  data-content="Built a cohesive, functional picture of a Fortune
+                  500 financial services holding company spanning numerous
+                  subsidiaries and myriad financial and operational systems.
+                  Worked with CFO and Finance staff from each holding company
+                  to reconcile each's varying world views. Prototyped the
+                  required financial reporting and transitioned to IT.">
+                  Organizational Visibility &amp; Financial Reporting
+                </a>
+              </li>
+            <ul>
+          </div>
+          <div class="col-sm-6">
+            <img class="headshot" src="/assets/img/work-headshots/rupert.jpg">
+            <em>
+              <p>
+                Adam has a one-in-a-million analytical mind. In the last year
+                alone I saw him solve problems in health care, automotive,
+                market research, and energy sectors while rebuilding our
+                internal analytics.
+              <p>
+                Any Statistics grad student can use regression and machine
+                learning tools, but Adam also has a trained eye for absorbing
+                different domains and distilling oceans of dirty data into
+                the salient, useful insights his clients require.
+              </p>
+            </em>
+            <div class="small-sans-serif"><strong>Rupert Morrison</strong> / Managing Director / Concentra</div>
+          </div>
+        </div>
+      </div>
+
+
 
       <div class="tab-pane" id="applications">
         <div class="row small">
@@ -174,13 +362,7 @@
               from those that simply produce large volumes of log, event, and
               user data of a more homogenous nature.
             </p>
-            <p>
-              For smaller projects and data-intensive eCommerce applications,
-              I can build solutions end-to-end. For projects with with a
-              technical team in place, I can contribute as architect or subject matter
-              expert, unwind complex models, or help code data management
-              components.
-            </p>
+
             <p class="small-sans-serif"><strong>Case Studies</strong></p>
             <ul>
               <li>
@@ -253,175 +435,8 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="analytics">
-        <div class="row small">
-          <div class="col-sm-6">
-            <p>
-              <em>Data Science</em> is the new term for the work I have been
-              doing for over a decade. Sometimes it involves massive, homogenous
-              datasets, but more often it involves many dirty, disparate
-              datasets that require cleansing and blending, categorization and
-              normalization, and more than a little domain expertise to
-              contextualize.
-            </p>
-            <p>
-              From there analytics is all about problem solving, finding ways
-              to get to clean, clear, and accurate answers to sometimes
-              ambiguous questions.
-            </p>
-            <p class="small-sans-serif"><strong>Case Studies</strong></p>
-            <ul>
-              <li>
-                <a href="javascript:;" class="popover-link" data-toggle="popover"
-                  data-content="Data discovery and modeling for one of the
-                  largest fraud cases in history.
-                  Model required matching transfers across thousands of
-                  accounts and recursively adjusting
-                  balances over 30 years of financial skullduggery with patchy
-                  data arriving
-                  sporadically to fill gaps. Analysis consumed by the WSJ,
-                  FBI, and trustees.">
-                  Data Forensics for a Thirty-Year Fraud Case
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;" class="popover-link" data-toggle="popover"
-                  data-content="Built a cohesive, functional picture of a Fortune
-                  500 financial services holding company spanning numerous
-                  subsidiaries and myriad financial and operational systems.
-                  Worked with CFO and Finance staff from each holding company
-                  to reconcile each's varying world views. Prototyped the
-                  required financial reporting and transitioned to IT.">
-                  Organizational Visibility &amp; Financial Reporting
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;" class="popover-link" data-toggle="popover"
-                  data-content="Performed end-to-end supply chain optimization
-                  for a Fortune 500 consumer goods company, including
-                  manufacturing, warehousing, repackaging, and all stages of
-                  distribution. Complexity of the project including >100,000 SKUs
-                  with a wide range of manufacturing and repackaging features
-                  that required an adapatable product hierarchy and intelligent
-                  constraints for each scenario. ">
-                  Supply Chain Network Optimization
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;" class="popover-link" data-toggle="popover"
-                  data-content="Aggregated and cleansed demand signals for a
-                  UK-based smart grid company. Built a neural network model
-                  (simple machine learning) to predict future demand across
-                  millions of nodes given historical behavior and seasonality.
-                  Built the predictive model into the company's existing app.">
-                  Predictive Model: Smart Grid Application
-                </a>
-              </li>
-            <ul>
-          </div>
-          <div class="col-sm-6">
-            <img class="headshot" src="/assets/img/work-headshots/rupert.jpg">
-            <em>
-              <p>
-                Adam has a one-in-a-million analytical mind. In the last year
-                alone I saw him solve problems in health care, automotive,
-                market research, and energy sectors while rebuilding our
-                internal analytics.
-              <p>
-                Any Statistics grad student can use regression and machine
-                learning tools, but Adam also has a trained eye for absorbing
-                different domains and distilling oceans of dirty data into
-                the salient, useful insights his clients require.
-              </p>
-            </em>
-            <div class="small-sans-serif"><strong>Rupert Morrison</strong> / Managing Director / Concentra</div>
-          </div>
-        </div>
-      </div>
 
-      <div class="tab-pane" id="bi">
-        <div class="row small">
-          <div class="col-sm-6">
-            <p>
-              The term <em>Business Intelligence</em> has recently taken on a
-              negative connotation owing to years of sprawling, miserable,
-              largely unsuccessful BI implementations using complicated tools
-              and over-reaching promises.
-            </p>
-            <p>
-              Even among firms with completed implementations, it is estimated
-              that on average only 11% of employees use these tools.
-            </p>
-            <p>
-              My approach is much more inclusive and relies on simpler, modular
-              components that can be brought online swiftly, used by all, and
-              replaced easily as business needs scale and evolve.
-            </p>
-            <p class="small-sans-serif"><strong>Case Studies</strong></p>
-            <ul>
-              <li>
-                <a href="javascript:;" class="popover-link" data-toggle="popover"
-                  data-content="Emergency data consolidation for Fortune 50
-                  auto maker bankruptcy. Required
-                  an auditable ETL pipeline for 72 disparate source ERP
-                  systems to support
-                  reporting for restructuring. Different charts of accounts,
-                  different systems,
-                  different data formats..">
-                  Bankruptcy Data Consolidation: Fortune 500 Automotive
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;" class="popover-link" data-toggle="popover"
-                  data-content="Built a system and process to manage research
-                  data integration for the National Health Service (NHS) in the
-                  United Kingdom. The process had to take into consideration
-                  very particular statistical methods (i.e. you cannot take
-                  averages of averages) despite the large dataset.
-                  .">
-                  Cancer Research Aggregation Framework
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;" class="popover-link" data-toggle="popover"
-                  data-content="Re-engineered a painful manual process for
-                  aggregating market research data for a UK marketing firm.
-                  The new process included piping data through numerous
-                  transformations all the way into Excel and PowerPoint. The
-                  resulting PowerPoint integration turned a three week process
-                  into a twenty minute process. ">
-                  Market Research Automation, Reporting, Dashboarding
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;" class="popover-link" data-toggle="popover"
-                  data-content="Numerous projects (both client and internal)
-                  using traditional
-                  Kimball Method approaches to ETL, data warehousing, and OLAP
-                  for reporting.
-                  Old school business intelligence delivered with modern tools.">
-                  Kimball method ETL, DW, OLAP, Dashboards
-                </a>
-              </li>
-            <ul>
-          </div>
-          <div class="col-sm-6">
-            <img class="headshot" src="/assets/img/work-headshots/stephan.jpg">
-            <em>
-              <p>
-                Coordinating with and consolidating data from hundreds of
-                federal government departments is difficult, particularly when
-                you are talking about sensitive spend data.
-              <p>
-                Adam helped us buld the team that could replicate the work his
-                team started. His intensity can be a lot to handle, but his
-                results are without question!
-              </p>
-            </em>
-            <div class="small-sans-serif"><strong>Stéphan Déry MPA, CPA, CMA, FMA, RPA</strong> / Director General, Strategic Planning, Administration and Renewal / PWGSC Canada</div>
-          </div>
-        </div>
-      </div>
+
 
       <div class="tab-pane" id="prototypes">
         <div class="row small">
@@ -490,6 +505,9 @@
           </div>
         </div>
       </div>
+
+
+
 
       <div class="tab-pane" id="advisory">
         <div class="row small">
@@ -619,7 +637,7 @@
         +1 (617) 830-1854
       </li>
       <li>
-        175 Varick Street,  NYC 10014
+        79 Madison Avenue,  NYC 10016
       </li>
     </ul>
     <ul class="social">
